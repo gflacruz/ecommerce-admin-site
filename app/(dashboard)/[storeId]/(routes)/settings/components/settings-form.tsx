@@ -26,7 +26,7 @@ const formSchema = z.object({
   name: z.string().min(1)
 });
 
-type SettingsFormValues = zinfer<typeof formSchema>;
+type SettingsFormValues = z.infer<typeof formSchema>;
 
 export const SettingsForm: React.FC<SettingsFormProps> = ({initialData}) => {
   const [open, setOpen] = useState(false)
